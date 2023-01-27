@@ -44,7 +44,6 @@ const HomePage = () => {
   const { mutate: createMutate } = useMutation(createUser, {
     onSuccess: (res) => {
       const newData = [res.data, ...users];
-
       setUsers(newData);
       setCacheState(newData);
       setOpen(false);
